@@ -1,0 +1,50 @@
+2.3.  Programa después de correcciones:
+
+def check_test(score):
+   if score >= 80:
+      return True
+   else:
+       return False
+amount = int(input('Ingresa el número de participantes:'))
+for i in range(amount):
+   name = input('Ingresar nombre:')
+   score = int(input('Ingresar puntaje de prueba:'))
+   res = check_test(score)
+   print('Admitido:', res)
+
+2.4.  Programa completado:
+
+def get_course(wish):
+   if wish.find('deportes') != -1:
+       course = 'voleibol'
+   elif wish.find('ciencias') != -1:
+       course = 'astronomía'
+   elif wish.find('cómics') != -1:
+       course = 'bocetos'
+   else:
+       course = 'historia de la Roma antigua'
+   return course
+
+
+amount = int(input('Número de estudiantes:'))
+for i in range(amount):
+   wish = input('Ingresa tu deseo:')
+   course = get_course(wish)
+   print('Recomendado:', course)
+   if course == 'astronomía':
+       print('¡Advertencia! ¡Las clases se realizan en la noche!')
+
+2.5. Programa completado:
+
+def is_camp(grade):
+   if grade > 50:
+       return True
+   else:
+       return False
+amount = int(input('Número de estudiantes:'))
+for i in range(amount):
+   grade = int(input('Ingresa la calificación:'))
+   res = is_camp(grade)
+   print('Admitido:', res)
+   if res == False:
+       print('¡Empieza a leer! Aquí hay algunas opciones geniales: El guardián entre el centeno, El gran Gatsby, Lo que el viento se llevó')
